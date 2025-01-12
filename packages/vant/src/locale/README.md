@@ -41,6 +41,7 @@ Current supported languages:
 
 | Language                 | Filename     | Version  |
 | ------------------------ | ------------ | -------- |
+| Arabic                   | ar-SA        | `v3.5.0` |
 | Bulgarian                | bg-BG        | `v3.5.0` |
 | Bangla (Bangladesh)      | bn-BD        | `v3.4.5` |
 | Danish                   | da-DK        | `v3.4.8` |
@@ -58,6 +59,7 @@ Current supported languages:
 | Icelandic                | is-IS        | `v3.4.7` |
 | Italian                  | it-IT        | `v3.4.5` |
 | Japanese                 | ja-JP        | -        |
+| Kazakh                   | kk-KZ        | -        |
 | Khmer                    | km-KH        | `v4.1.2` |
 | Korean                   | ko-KR        | `v3.4.3` |
 | Lao                      | la-LA        | `v3.4.7` |

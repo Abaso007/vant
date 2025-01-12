@@ -229,7 +229,7 @@ export default {
 
 | 名称    | 说明       | 参数                                      |
 | ------- | ---------- | ----------------------------------------- |
-| default | 自定义文本 | -                                         |
+| default | 自定义文本 | _{ checked: boolean, disabled: boolean }_ |
 | icon    | 自定义图标 | _{ checked: boolean, disabled: boolean }_ |
 
 ### 类型定义
@@ -252,15 +252,15 @@ import type {
 
 组件提供了下列 CSS 变量，可用于自定义样式，使用方法请参考 [ConfigProvider 组件](#/zh-CN/config-provider)。
 
-| 名称                             | 默认值                     | 描述 |
-| -------------------------------- | -------------------------- | ---- |
-| --van-radio-size                 | _20px_                     | -    |
-| --van-radio-dot-size             | _8px_                      | -    |
-| --van-radio-border-color         | _var(--van-gray-5)_        | -    |
-| --van-radio-duration             | _var(--van-duration-fast)_ | -    |
-| --van-radio-label-margin         | _var(--van-padding-xs)_    | -    |
-| --van-radio-label-color          | _var(--van-text-color)_    | -    |
-| --van-radio-checked-icon-color   | _var(--van-primary-color)_ | -    |
-| --van-radio-disabled-icon-color  | _var(--van-gray-5)_        | -    |
-| --van-radio-disabled-label-color | _var(--van-text-color-3)_  | -    |
-| --van-radio-disabled-background  | _var(--van-border-color)_  | -    |
+| 名称 | 默认值 | 描述 |
+| --- | --- | --- |
+| --van-radio-size | _20px_ | - |
+| --van-radio-dot-size | _8px_ | 圆点到边界的距离 |
+| --van-radio-border-color | _var(--van-gray-5)_ | - |
+| --van-radio-duration | _var(--van-duration-fast)_ | - |
+| --van-radio-label-margin | _var(--van-padding-xs)_ | - |
+| --van-radio-label-color | _var(--van-text-color)_ | - |
+| --van-radio-checked-icon-color | _var(--van-primary-color)_ | - |
+| --van-radio-disabled-icon-color | _var(--van-gray-5)_ | - |
+| --van-radio-disabled-label-color | _var(--van-text-color-3)_ | - |
+| --van-radio-disabled-background | _var(--van-border-color)_ | - |
