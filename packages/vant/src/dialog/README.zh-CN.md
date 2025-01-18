@@ -32,7 +32,7 @@ showDialog({ message: '提示' });
 
 ### 消息提示
 
-用于提示一些消息，只包含一个确认按钮。
+用于提示一些消息，默认只包含一个确认按钮。
 
 ```js
 import { showDialog } from 'vant';
@@ -53,7 +53,7 @@ showDialog({
 
 ### 消息确认
 
-用于确认消息，包含取消和确认按钮。
+用于确认消息，默认包含确认和取消按钮。
 
 ```js
 import { showConfirmDialog } from 'vant';
@@ -104,12 +104,8 @@ import { showConfirmDialog } from 'vant';
 const beforeClose = (action) =>
   new Promise((resolve) => {
     setTimeout(() => {
-      if (action === 'confirm') {
-        resolve(true);
-      } else {
-        // 拦截取消操作
-        resolve(false);
-      }
+      // action !== 'confirm'  拦截取消操作
+      resolve(action === 'confirm');
     }, 1000);
   });
 
@@ -123,7 +119,7 @@ showConfirmDialog({
 
 ### 使用 Dialog 组件
 
-如果需要在 Dialog 内嵌入组件或其他自定义内容，可以直接使用 Dialog 组件，并使用默认插槽进行定制。使用前需要通过 `app.use` 等方式注册组件。
+如果你需要在 Dialog 内嵌入组件或其他自定义内容，可以直接使用 Dialog 组件，并使用默认插槽进行定制。使用前需要通过 `app.use` 等方式注册组件。
 
 ```html
 <van-dialog v-model:show="show" title="标题" show-cancel-button>
@@ -150,9 +146,9 @@ Vant 中导出了以下 Dialog 相关的辅助函数：
 
 | 方法名 | 说明 | 参数 | 返回值 |
 | --- | --- | --- | --- |
-| showDialog | 展示弹窗 | _options: DialogOptions_ | `Promise<void>` |
-| showConfirmDialog | 展示消息确认弹窗 | _options: DialogOptions_ | `Promise<void>` |
-| closeDialog | 关闭弹窗 | - | `void` |
+| showDialog | 展示消息提示弹窗，默认包含确认按钮 | _options: DialogOptions_ | `Promise<void>` |
+| showConfirmDialog | 展示消息确认弹窗，默认包含确认和取消按钮 | _options: DialogOptions_ | `Promise<void>` |
+| closeDialog | 关闭当前展示的弹窗 | - | `void` |
 | setDialogDefaultOptions | 修改默认配置，影响所有的 `showDialog` 调用 | _options: DialogOptions_ | `void` |
 | resetDialogDefaultOptions | 重置默认配置，影响所有的 `showDialog` 调用 | - | `void` |
 
@@ -186,6 +182,7 @@ Vant 中导出了以下 Dialog 相关的辅助函数：
 | beforeClose | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 Promise | _(action: string) => boolean \| Promise\<boolean\>_ | - |
 | transition | 动画类名，等价于 [transition](https://cn.vuejs.org/api/built-in-components.html#transition) 的 `name` 属性 | _string_ | - |
 | teleport | 指定挂载的节点，等同于 Teleport 组件的 [to 属性](https://cn.vuejs.org/api/built-in-components.html#teleport) | _string \| Element_ | `body` |
+| keyboardEnabled | 是否启用键盘能力，在展示确认和取消按钮的时候，默认情况下键盘的 `Enter` 和 `Esc` 会执行 `confirm` 和 `cancel` 函数 | _boolean_ | `true` |
 
 ### Props
 
@@ -219,6 +216,7 @@ Vant 中导出了以下 Dialog 相关的辅助函数：
 | before-close | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 Promise | _(action: string) => boolean \| Promise\<boolean\>_ | - |
 | transition | 动画类名，等价于 [transition](https://cn.vuejs.org/api/built-in-components.html#transition) 的 `name` 属性 | _string_ | - |
 | teleport | 指定挂载的节点，等同于 Teleport 组件的 [to 属性](https://cn.vuejs.org/api/built-in-components.html#teleport) | _string \| Element_ | - |
+| keyboard-enabled | 是否启用键盘能力，在展示确认和取消按钮的时候，默认情况下键盘的 `Enter` 和 `Esc` 会执行 `confirm` 和 `cancel` 函数 | _boolean_ | `true` |
 
 ### Events
 

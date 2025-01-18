@@ -33,6 +33,10 @@ export default {
     baiduAnalytics: {
       seed: 'af5d41bc4e446e76665dbe3ec18d55c3',
     },
+    icpLicense: {
+      text: '浙ICP备2021036118号',
+      link: 'https://beian.miit.gov.cn/',
+    },
     headHtml: `<script>
 if (location.host === 'youzan.github.io') {
 location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
@@ -49,7 +53,7 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
         links: [
           {
             logo: 'https://fastly.jsdelivr.net/npm/@vant/assets/weapp.svg',
-            url: 'https://vant-contrib.gitee.io/vant-weapp/',
+            url: '/vant-weapp/',
           },
           {
             logo: 'https://fastly.jsdelivr.net/npm/@vant/assets/github.svg',
@@ -313,6 +317,10 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
                 title: 'Empty 空状态',
               },
               {
+                path: 'highlight',
+                title: 'Highlight 高亮文本',
+              },
+              {
                 path: 'image-preview',
                 title: 'ImagePreview 图片预览',
               },
@@ -378,6 +386,10 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
                 title: 'ActionBar 动作栏',
               },
               {
+                path: 'back-top',
+                title: 'BackTop 回到顶部',
+              },
+              {
                 path: 'grid',
                 title: 'Grid 宫格',
               },
@@ -408,10 +420,6 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
               {
                 path: 'tree-select',
                 title: 'TreeSelect 分类选择',
-              },
-              {
-                path: 'back-top',
-                title: 'BackTop 回到顶部',
               },
             ],
           },
@@ -502,6 +510,10 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
               {
                 path: 'use-window-size',
                 title: 'useWindowSize',
+              },
+              {
+                path: 'use-raf',
+                title: 'useRaf',
               },
             ],
           },
@@ -777,6 +789,10 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
                 title: 'Empty',
               },
               {
+                path: 'highlight',
+                title: 'Highlight',
+              },
+              {
                 path: 'image-preview',
                 title: 'ImagePreview',
               },
@@ -842,6 +858,10 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
                 title: 'ActionBar',
               },
               {
+                path: 'back-top',
+                title: 'BackTop',
+              },
+              {
                 path: 'grid',
                 title: 'Grid',
               },
@@ -872,10 +892,6 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
               {
                 path: 'tree-select',
                 title: 'TreeSelect',
-              },
-              {
-                path: 'back-top',
-                title: 'BackTop',
               },
             ],
           },
@@ -966,6 +982,10 @@ location.href = location.href.replace('youzan.github.io', 'vant-ui.github.io');
               {
                 path: 'use-window-size',
                 title: 'useWindowSize',
+              },
+              {
+                path: 'use-raf',
+                title: 'useRaf',
               },
             ],
           },
